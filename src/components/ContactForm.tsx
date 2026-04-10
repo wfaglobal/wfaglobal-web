@@ -31,7 +31,7 @@ export default function ContactForm() {
       <label className={styles.lbl}>Organization</label>
       <input className={styles.cf} name="organization" type="text" placeholder="Firm or institution" />
       <label className={styles.lbl}>Message</label>
-      <textarea className={styles.cf} name="message" placeholder="How can we help you?" required />
+      <textarea className={styles.cf} name="message" placeholder="Please write your message here" required />
       <button type="submit" className={styles.btn} disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message Sent ✓' : 'Send Message'}
       </button>
