@@ -5,9 +5,9 @@ import styles from './page.module.css'
 
 export default function Home() {
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main>
+      <main style={{ flex: 1 }}>
         <div className={styles.bodyWrap}>
           <h1 className={styles.heading}>Co-Creating the Future with Global Connectivity</h1>
           <div className={styles.bodyText}>
@@ -20,6 +20,6 @@ export default function Home() {
         <HexGrid />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }

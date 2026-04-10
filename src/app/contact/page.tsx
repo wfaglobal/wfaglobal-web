@@ -5,9 +5,9 @@ import styles from './contact.module.css'
 
 export default function Contact() {
   return (
-    <>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
-      <main>
+      <main style={{ flex: 1 }}>
         <div className={styles.bodyWrap}>
           <h1 className={styles.heading}>Contact</h1>
           <div className={styles.contactGrid}>
@@ -30,6 +30,6 @@ export default function Contact() {
         </div>
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
