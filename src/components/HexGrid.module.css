@@ -1,0 +1,13 @@
+.hexSection { margin-top: 3rem; border-top: none; padding: 3rem 0 4rem; background: url('/sky.jpg') center/cover no-repeat; }
+.eyebrow { font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: #1a3a6b; margin-bottom: 2rem; font-weight: 500; padding-left: 2rem; }
+.grid { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+.container { position: relative; width: 100%; padding-bottom: 82%; }
+.hc { position: absolute; width: 24.25%; }
+.hi { position: relative; width: 100%; padding-bottom: 115%; clip-path: polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%); background-size: cover; background-position: center; cursor: pointer; transition: transform 0.25s; }
+.hi:hover { transform: scale(1.06); z-index: 10; }
+.ho { position: absolute; inset: 0; background: rgba(8,22,52,0); display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+.hi:hover .ho { background: rgba(8,22,52,0.78); }
+.hl { font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 600; color: #fff; text-align: center; letter-spacing: 0.04em; line-height: 1.4; padding: 0 12px; opacity: 0; transform: translateY(8px); transition: opacity 0.3s, transform 0.3s; text-shadow: 0 1px 6px rgba(0,0,0,0.6); }
+.hi:hover .hl { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) { .hc { width: 32%; } .container { padding-bottom: 120%; } }
+@media (max-width: 480px) { .hc { width: 47%; } .container { padding-bottom: 180%; } }

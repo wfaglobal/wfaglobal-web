@@ -1,0 +1,13 @@
+.header { background: var(--navy); border-bottom: 10px solid var(--blue); }
+.navInner { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 1.25rem 2.5rem 0.75rem; }
+.logoBlock { display: flex; align-items: center; gap: 1rem; cursor: pointer; margin-bottom: 0.6rem; text-decoration: none; }
+.logoImg { object-fit: contain; flex-shrink: 0; }
+.logoName { font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; line-height: 1; }
+.navLinks { display: flex; list-style: none; justify-content: center; gap: 0; }
+.navLinks li a { display: flex; align-items: center; padding: 0.4rem 1.25rem; font-size: 0.85rem; color: rgba(255,255,255,0.65); text-decoration: none; letter-spacing: 0.04em; border-bottom: 3px solid transparent; transition: all 0.15s; }
+.navLinks li a:hover { color: #fff; }
+.active { color: #fff !important; font-weight: 500; border-bottom-color: var(--blue) !important; }
+@media (max-width: 768px) {
+  .logoName { font-size: 1.6rem; }
+  .logoImg { width: 55px !important; height: 55px !important; }
+}

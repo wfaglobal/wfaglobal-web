@@ -1,0 +1,11 @@
+.footer { background: var(--navy); border-top: 10px solid var(--blue); padding: 1.5rem 2.5rem; }
+.footerInner { max-width: 900px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.fl { display: flex; align-items: center; gap: 0.65rem; }
+.fl img { opacity: 0.9; }
+.fl span { font-size: 0.8rem; font-weight: 500; color: rgba(255,255,255,0.85); letter-spacing: 0.08em; }
+.fd { font-size: 0.62rem; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 500px; text-align: center; }
+.fr { font-size: 0.65rem; color: rgba(255,255,255,0.75); text-align: right; line-height: 1.9; }
+@media (max-width: 768px) {
+  .footerInner { flex-direction: column; text-align: center; gap: 1rem; }
+  .fr { text-align: center; }
+}

@@ -1,0 +1,9 @@
+.form { display: flex; flex-direction: column; }
+.lbl { display: block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--navy); margin-bottom: 0.45rem; font-weight: 500; }
+.cf { width: 100%; border: 1px solid var(--border); padding: 0.6rem 0.85rem; font-size: 0.88rem; font-family: 'DM Sans', sans-serif; color: var(--text); outline: none; margin-bottom: 1rem; background: #fff; transition: border-color 0.2s; }
+.cf:focus { border-color: var(--blue); }
+textarea.cf { height: 105px; resize: vertical; }
+.btn { background: var(--navy); color: #fff; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.75rem 1.75rem; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; width: 100%; transition: opacity 0.2s; }
+.btn:hover { opacity: 0.85; }
+.btn:disabled { opacity: 0.6; cursor: not-allowed; }
+.error { font-size: 0.8rem; color: #c00; margin-top: 0.75rem; }
