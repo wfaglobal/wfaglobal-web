@@ -3,14 +3,14 @@ import styles from './HexGrid.module.css'
 
 const sectors = [
   { label: 'Artificial Intelligence', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80&fit=crop' },
-  { label: 'Quantum Computing',       img: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80&fit=crop' },
-  { label: 'Fintech',                 img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&fit=crop' },
+  { label: 'Quantum Computing',       img: 'https://images.unsplash.com/photo-1614854262318-831574f15f1f?w=400&q=80&fit=crop' },
+  { label: 'Fintech',                 img: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&q=80&fit=crop' },
   { label: 'Deeptech',                img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop' },
   { label: 'Real Estate Tech',        img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80&fit=crop' },
   { label: 'Trading & Blockchain',    img: 'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=400&q=80&fit=crop' },
   { label: 'Clean Technology',        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80&fit=crop' },
   { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80&fit=crop' },
-  { label: 'Private Markets',         img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80&fit=crop' },
+  { label: 'Private Markets',         img: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&q=80&fit=crop' },
   { label: 'Circular Economy',        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&q=80&fit=crop' },
 ]
 
@@ -26,8 +26,6 @@ export default function HexGrid() {
   return (
     <section className={styles.hexSection}>
       <p className={styles.eyebrow}>Investment focus</p>
-
-      {/* Desktop honeycomb */}
       <div className={`${styles.grid} ${styles.desktopGrid}`}>
         <div className={styles.container}>
           {sectors.map((s, i) => (
@@ -39,8 +37,6 @@ export default function HexGrid() {
           ))}
         </div>
       </div>
-
-      {/* Mobile flex grid */}
       <div className={`${styles.grid} ${styles.mobileGrid}`}>
         {sectors.map((s) => (
           <div key={s.label} className={styles.mobileHc}>
