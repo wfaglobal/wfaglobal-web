@@ -1,6 +1,6 @@
 .header { background: var(--navy); border-bottom: 10px solid var(--blue); position: relative; }
-.navInner { display: flex; align-items: center; justify-content: center; padding: 1.25rem 2.5rem 0.75rem; flex-direction: column; }
-.logoBlock { display: flex; align-items: center; gap: 1rem; cursor: pointer; margin-bottom: 0.6rem; text-decoration: none; }
+.navInner { display: flex; align-items: center; justify-content: center; padding: 1.5rem 3.5rem 0.85rem; flex-direction: column; }
+.logoBlock { display: flex; align-items: center; gap: 1.1rem; cursor: pointer; margin-bottom: 0.7rem; text-decoration: none; }
 .logoImg { object-fit: contain; flex-shrink: 0; }
 .logoName { font-size: 2.8rem; font-weight: 700; color: #fff; letter-spacing: 0.04em; line-height: 1; }
 .navLinks { display: flex; list-style: none; justify-content: center; gap: 0; }
@@ -11,7 +11,7 @@
 .mobileMenu { display: none; }
 
 @media (max-width: 768px) {
-  .navInner { flex-direction: row; justify-content: space-between; align-items: center; padding: 0.9rem 1.25rem; }
+  .navInner { flex-direction: row; justify-content: space-between; align-items: center; padding: 0.9rem 1.5rem; }
   .logoBlock { margin-bottom: 0; }
   .logoName { font-size: 1.8rem; line-height: 1.15; max-width: 200px; white-space: normal; }
   .logoImg { width: 52px !important; height: 52px !important; }
