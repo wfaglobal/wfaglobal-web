@@ -5,11 +5,11 @@ const sectors = [
   { label: 'Artificial Intelligence', img: '/artificial_intelligence.avif' },
   { label: 'Quantum Computing',       img: '/quantum_computing.avif' },
   { label: 'Fintech',                 img: '/fintech.avif' },
-  { label: 'Deeptech',                img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop' },
+  { label: 'Deeptech',                img: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?w=400&q=80&fit=crop' },
   { label: 'PropTech',                img: '/real_estate_tech.avif' },
   { label: 'Trading & Blockchain',    img: '/trading_and_blockchain.avif' },
   { label: 'Clean Technology',        img: '/clean_technology.avif' },
-  { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&q=80&fit=crop' },
+  { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop' },
   { label: 'Private Markets',         img: '/private_markets.avif' },
   { label: 'Circular Economy',        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&q=80&fit=crop' },
 ]
