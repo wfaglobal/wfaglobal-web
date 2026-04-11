@@ -5,7 +5,7 @@ const sectors = [
   { label: 'Artificial Intelligence', img: '/artificial_intelligence.avif' },
   { label: 'Quantum Computing',       img: '/quantum_computing.avif' },
   { label: 'Fintech',                 img: '/fintech.avif' },
-  { label: 'Deeptech',                img: 'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=400&q=80&fit=crop' },
+  { label: 'Deeptech',                img: '/deeptech.avif' },
   { label: 'PropTech',                img: '/real_estate_tech.avif' },
   { label: 'Trading & Blockchain',    img: '/trading_and_blockchain.avif' },
   { label: 'Clean Technology',        img: '/clean_technology.avif' },
