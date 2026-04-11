@@ -1,26 +1,18 @@
 .bodyWrap { max-width: 900px; margin: 0 auto; padding: 3.5rem 2.5rem 2rem; }
 .heading { font-family: 'Source Serif 4', serif; font-size: 2.2rem; font-weight: 400; color: var(--navy); margin-bottom: 1.75rem; line-height: 1.2; }
+.bodyText { border-left: 4px solid var(--blue); padding-left: 1.75rem; }
 .bodyText p { font-size: 1.15rem; color: var(--text-mid); line-height: 1.95; margin-bottom: 1.5rem; text-align: justify; }
 .bodyText p:last-child { margin-bottom: 0; }
 
 @media (max-width: 768px) {
   .bodyWrap { padding: 2rem 1.25rem; }
   .heading { font-size: 1.5rem; line-height: 1.25; }
-  .bodyText p { 
-    font-size: 0.95rem; 
-    line-height: 1.65; 
-    text-align: left;
-    margin-bottom: 1.1rem;
-    word-spacing: -0.01em;
-  }
+  .bodyText { padding-left: 1.25rem; }
+  .bodyText p { font-size: 0.95rem; line-height: 1.65; text-align: left; margin-bottom: 1.1rem; }
 }
 
 @media (max-width: 480px) {
   .bodyWrap { padding: 1.5rem 1rem; }
   .heading { font-size: 1.35rem; }
-  .bodyText p { 
-    font-size: 0.92rem; 
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
+  .bodyText p { font-size: 0.92rem; line-height: 1.6; margin-bottom: 1rem; }
 }
