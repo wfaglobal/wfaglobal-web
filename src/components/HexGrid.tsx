@@ -2,16 +2,16 @@
 import styles from './HexGrid.module.css'
 
 const sectors = [
-  { label: 'Artificial Intelligence', img: '/artificial_intelligence.avif' },
-  { label: 'Quantum Computing',       img: '/quantum_computing.avif' },
-  { label: 'Fintech',                 img: '/fintech.avif' },
-  { label: 'Deeptech',                img: '/deeptech.avif' },
-  { label: 'Real Estate Tech',        img: '/real_estate_tech.avif' },
-  { label: 'Trading & Blockchain',    img: '/trading_and_blockchain.avif' },
-  { label: 'Clean Technology',        img: '/clean_technology.avif' },
-  { label: 'Cybersecurity',           img: '/cybersecurity.avif' },
-  { label: 'Private Markets',         img: '/private_markets.avif' },
-  { label: 'Circular Economy',        img: '/circular_economy.avif' },
+  { label: 'Artificial Intelligence', img: 'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=400&q=80&fit=crop' },
+  { label: 'Quantum Computing',       img: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=400&q=80&fit=crop' },
+  { label: 'Fintech',                 img: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&q=80&fit=crop' },
+  { label: 'Deeptech',                img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80&fit=crop' },
+  { label: 'Real Estate Tech',        img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80&fit=crop' },
+  { label: 'Trading & Blockchain',    img: 'https://images.unsplash.com/photo-1605792657660-596af9009e82?w=400&q=80&fit=crop' },
+  { label: 'Clean Technology',        img: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&q=80&fit=crop' },
+  { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=400&q=80&fit=crop' },
+  { label: 'Private Markets',         img: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&q=80&fit=crop' },
+  { label: 'Circular Economy',        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&q=80&fit=crop' },
 ]
 
 const W = 24.25, SX = 25.25, SY = 26.81, OX = SX / 2
@@ -27,7 +27,7 @@ export default function HexGrid() {
     <section className={styles.hexSection}>
       <p className={styles.eyebrow}>Investment focus</p>
 
-      {/* Desktop layout — absolute positioned honeycomb */}
+      {/* Desktop honeycomb */}
       <div className={`${styles.grid} ${styles.desktopGrid}`}>
         <div className={styles.container}>
           {sectors.map((s, i) => (
@@ -40,7 +40,7 @@ export default function HexGrid() {
         </div>
       </div>
 
-      {/* Mobile layout — simple flex grid */}
+      {/* Mobile flex grid */}
       <div className={`${styles.grid} ${styles.mobileGrid}`}>
         {sectors.map((s) => (
           <div key={s.label} className={styles.mobileHc}>
