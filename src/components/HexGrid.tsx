@@ -9,7 +9,7 @@ const sectors = [
   { label: 'PropTech',                img: '/real_estate_tech.avif' },
   { label: 'Trading & Blockchain',    img: '/trading_and_blockchain.avif' },
   { label: 'Clean Technology',        img: '/clean_technology.avif' },
-  { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=80&fit=crop' },
+  { label: 'Cybersecurity',           img: 'https://images.unsplash.com/photo-1510511459019-5dda7724fd87?w=400&q=80&fit=crop' },
   { label: 'Private Markets',         img: '/private_markets.avif' },
   { label: 'Circular Economy',        img: 'https://images.unsplash.com/photo-1532601224476-15c79f2f7a51?w=400&q=80&fit=crop' },
 ]
