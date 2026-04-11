@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'WFA Global Investments LLC',
+  title: 'WFA Global',
   description: 'Co-Creating the Future with Global Connectivity',
 }
 
