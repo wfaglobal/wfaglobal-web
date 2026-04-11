@@ -14,8 +14,6 @@ const sectors = [
   { label: 'Circular Economy',        img: '/circular_economy.avif' },
 ]
 
-// 4-3-3 layout positions (left%, top%)
-// W=24.25%, G=1%, SX=25.25%, H=27.89%, SY=26.81%
 const W = 24.25, SX = 25.25, SY = 26.81, OX = SX / 2
 
 const positions = [
@@ -28,18 +26,29 @@ export default function HexGrid() {
   return (
     <section className={styles.hexSection}>
       <p className={styles.eyebrow}>Investment focus</p>
-      <div className={styles.grid}>
+
+      {/* Desktop layout — absolute positioned honeycomb */}
+      <div className={`${styles.grid} ${styles.desktopGrid}`}>
         <div className={styles.container}>
           {sectors.map((s, i) => (
             <div key={s.label} className={styles.hc} style={{ left: `${positions[i][0].toFixed(3)}%`, top: `${positions[i][1].toFixed(3)}%` }}>
               <div className={styles.hi} style={{ backgroundImage: `url(${s.img})` }}>
-                <div className={styles.ho}>
-                  <span className={styles.hl}>{s.label}</span>
-                </div>
+                <div className={styles.ho}><span className={styles.hl}>{s.label}</span></div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Mobile layout — simple flex grid */}
+      <div className={`${styles.grid} ${styles.mobileGrid}`}>
+        {sectors.map((s) => (
+          <div key={s.label} className={styles.mobileHc}>
+            <div className={styles.hi} style={{ backgroundImage: `url(${s.img})` }}>
+              <div className={styles.ho}><span className={styles.hl}>{s.label}</span></div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   )
