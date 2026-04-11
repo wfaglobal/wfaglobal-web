@@ -14,12 +14,12 @@ export default function Contact() {
             <ContactForm />
             <div className={styles.info}>
               <div className={styles.ci}>
-                <h4>New York</h4>
-                <p>100 Park Avenue<br />New York, NY 10017</p>
-              </div>
-              <div className={styles.ci}>
                 <h4>Connecticut</h4>
                 <p>15 River Road<br />Wilton, CT 06897</p>
+              </div>
+              <div className={styles.ci}>
+                <h4>New York</h4>
+                <p>100 Park Avenue<br />New York, NY 10017</p>
               </div>
               <div className={styles.ci}>
                 <h4>Email</h4>
