@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(req: NextRequest) {
-  const { name, email, organization, message } = await req.json()
+  const { name, email, organization, message, website } = await req.json()
+
+  // Honeypot check — real users never fill this field; bots do
+  if (website) {
+    return NextResponse.json({ success: true }) // silently discard
+  }
 
   // Use Resend or any email service - for now log and return success
   // In production add: RESEND_API_KEY to Vercel env vars
