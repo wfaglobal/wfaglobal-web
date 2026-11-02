@@ -116,7 +116,7 @@ export default function Books() {
               <a href="#contact" className={styles.btnGhost}>Get in touch</a>
             </div>
             <p className={styles.byline}>
-              Author of <em>Bounded Agency</em> — A Framework for AI Systems
+              Author of <em>Bounded Agency</em> — A Practical Framework for Governing AI Systems
             </p>
           </div>
         </section>
