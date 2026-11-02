@@ -59,7 +59,7 @@ const books = [
 // SSRN working papers, grouped by theme, newest first. URL: https://ssrn.com/abstract=<id>
 const paperGroups = [
   {
-    theme: 'Bounded Agency & AI Governance',
+    theme: 'Bounded Agency in AI Systems',
     papers: [
       { id: '6916678', date: 'Jun 2026', title: 'Bounded Agency in the Age of AI', subtitle: 'Institutional Foundations and Domain Applications' },
       { id: '6912758', date: 'Jun 2026', title: 'Six Failure Modes of AI Delegation', subtitle: 'Deriving the Bounded Agency Primitives from a Feasibility Constraint for Intervention' },
@@ -69,13 +69,13 @@ const paperGroups = [
     ],
   },
   {
-    theme: 'Inference & Methodology',
+    theme: 'Inference Models',
     papers: [
       { id: '7296798', date: 'Aug 2026', title: 'Mechanism-informed Inference Models', subtitle: 'A Category, and Its Scope Conditions' },
     ],
   },
   {
-    theme: 'Human Development in the Age of AI',
+    theme: 'Human Agency and Its Implications',
     papers: [
       { id: '6463438', date: 'Mar 2026', title: 'Development Resilience as a Missing State Variable for the Age of AI', subtitle: 'Empirical Evidence and Implications for GDP and Sovereign Risk' },
       { id: '6061414', date: 'Jan 2026', title: 'The Human Development Spread (HDS)', subtitle: 'Why Economic Growth Can Coexist with Rising Human Fragility in the Age of AI' },
@@ -218,10 +218,10 @@ export default function Books() {
         <section id="research" className={styles.section}>
           <div className={styles.wrap}>
             <p className={styles.eyebrow}>Research</p>
-            <h2 className={styles.h2}>Research papers.</h2>
+            <h2 className={styles.h2}>Selected Research</h2>
             <p className={styles.sectionLead}>
-              The research behind the Bounded Agency framework, and related work on human development in the age of AI
-              — all available on SSRN.
+              On Bounded Agency in AI systems, inference models, and human agency and its implications — all
+              available on SSRN.
             </p>
             {paperGroups.map((g) => (
               <div key={g.theme} className={styles.paperGroup}>
