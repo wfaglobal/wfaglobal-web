@@ -292,14 +292,15 @@ export default function Books() {
               <p className={styles.eyebrowLight}>Get in touch</p>
               <h2 className={styles.h2Light}>Is your AI governable by design?</h2>
               <p className={styles.contactLead}>
-                For briefings, board conversations, speaking or bulk copies of the books, send a note and I’ll reply
-                personally.
+                For briefings, board conversations, research collaboration, partnerships or speaking, send a note and
+                I’ll reply personally.
               </p>
               <ul className={styles.contactList}>
                 <li>AI governance briefings</li>
                 <li>Board and executive advisory</li>
-                <li>Speaking and book events</li>
-                <li>Bulk book orders</li>
+                <li>Research collaboration</li>
+                <li>Partnership explorations</li>
+                <li>Speaking, book events and bulk orders</li>
               </ul>
             </div>
             <div className={styles.formCard}>
@@ -309,8 +310,9 @@ export default function Books() {
                   'General inquiry',
                   'AI governance briefing',
                   'Board or executive advisory',
-                  'Speaking or event',
-                  'Books and bulk orders',
+                  'Research collaboration',
+                  'Partnership exploration',
+                  'Speaking, book events and bulk orders',
                 ]}
                 fallbackEmail="ravi@wfaglobal.com"
               />
