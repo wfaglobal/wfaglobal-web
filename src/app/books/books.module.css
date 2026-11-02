@@ -1,0 +1,64 @@
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 2.5rem; }
+
+.eyebrow { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); font-weight: 500; margin-bottom: 0.75rem; }
+.eyebrowLight { composes: eyebrow; color: #9dbfe8; }
+
+.hero { padding: 4.5rem 0 4.5rem; border-bottom: 1px solid var(--border); }
+.heroTitle { font-family: 'Source Serif 4', serif; font-weight: 400; color: var(--navy); font-size: clamp(2.2rem, 5.5vw, 4rem); line-height: 1.1; max-width: 860px; margin-bottom: 1.5rem; }
+.heroLead { font-size: clamp(1.05rem, 1.8vw, 1.3rem); line-height: 1.65; color: var(--text-mid); max-width: 700px; }
+.ctas { display: flex; flex-wrap: wrap; gap: 0.9rem; margin-top: 2rem; }
+.btnPrimary, .btnGhost { display: inline-flex; align-items: center; min-height: 46px; padding: 0 1.6rem; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: opacity 0.2s, background 0.2s; }
+.btnPrimary { background: var(--navy); color: #fff; }
+.btnPrimary:hover { opacity: 0.85; }
+.btnGhost { border: 1px solid var(--navy); color: var(--navy); }
+.btnGhost:hover { background: #f2f5fa; }
+.byline { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+
+.section { padding: 4.5rem 0; }
+.tinted { background: #f4f6f9; }
+.h2 { font-family: 'Source Serif 4', serif; font-weight: 400; color: var(--navy); font-size: clamp(1.7rem, 3.4vw, 2.5rem); line-height: 1.2; }
+.sectionLead { margin-top: 0.9rem; max-width: 680px; color: var(--muted); line-height: 1.75; }
+
+.split { display: flex; flex-wrap: wrap; gap: 2.5rem 3.5rem; align-items: flex-start; }
+.splitHead { flex: 1 1 280px; }
+.splitBody { flex: 999 1 440px; min-width: 0; }
+.splitBody p { font-size: 1.05rem; line-height: 1.85; color: var(--text-mid); margin-bottom: 1.1rem; }
+.splitBody p:last-child { margin-bottom: 0; }
+
+.principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 3rem; }
+.principle { border: 1px solid var(--border); border-top: 3px solid var(--blue); padding: 1.6rem 1.5rem; background: #fff; }
+.pNum { font-family: 'Source Serif 4', serif; font-size: 1.8rem; color: var(--blue); line-height: 1; margin-bottom: 0.8rem; }
+.principle h3 { font-family: 'Source Serif 4', serif; font-weight: 400; font-size: 1.3rem; color: var(--navy); margin-bottom: 0.5rem; }
+.principle p { font-size: 0.95rem; line-height: 1.65; color: var(--muted); }
+.motto { margin-top: 3rem; text-align: center; font-family: 'Source Serif 4', serif; font-style: italic; font-size: clamp(1.3rem, 2.4vw, 1.75rem); color: var(--navy); }
+
+.bookGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem 2.5rem; margin-top: 3rem; }
+.book { display: flex; flex-direction: column; }
+.role { font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--blue); font-weight: 500; margin-bottom: 1rem; }
+.cover { width: 100%; max-width: 260px; height: auto; box-shadow: 0 16px 32px rgba(13, 30, 61, 0.22); margin-bottom: 1.5rem; }
+.bookTitle { font-family: 'Source Serif 4', serif; font-weight: 400; font-size: 1.45rem; line-height: 1.25; color: var(--navy); }
+.bookSub { font-size: 0.85rem; color: var(--muted); margin: 0.35rem 0 0.9rem; }
+.bookText { font-size: 0.95rem; line-height: 1.7; color: var(--text-mid); margin-bottom: 1.25rem; }
+.bookLink { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.4rem; border: 1px solid var(--navy); color: var(--navy); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; }
+.bookLink:hover { background: var(--navy); color: #fff; }
+
+.links { display: flex; gap: 1.5rem; }
+.links a { color: var(--blue); font-size: 0.95rem; font-weight: 500; }
+
+.contact { background: var(--navy); padding: 4.5rem 0; }
+.contactGrid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3.5rem; align-items: start; }
+.h2Light { composes: h2; color: #fff; }
+.contactLead { margin-top: 1rem; color: rgba(255,255,255,0.78); line-height: 1.75; }
+.contactList { margin-top: 1.25rem; padding-left: 1.1rem; color: rgba(255,255,255,0.85); line-height: 2; font-size: 0.95rem; }
+.formCard { background: #fff; padding: 2rem; position: relative; }
+
+@media (max-width: 900px) {
+  .principles, .bookGrid { grid-template-columns: 1fr; }
+  .contactGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .wrap { padding: 0 1.25rem; }
+  .hero { padding: 2.75rem 0; }
+  .section, .contact { padding: 3rem 0; }
+  .formCard { padding: 1.4rem; }
+}
