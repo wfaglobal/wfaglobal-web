@@ -154,6 +154,38 @@ export default function Books() {
                 </div>
               ))}
             </div>
+
+            <div className={styles.reclaim}>
+              <div className={styles.reclaimDef}>
+                <p className={styles.eyebrowLight}>Reclaimability is the test</p>
+                <h3 className={styles.reclaimTitle}>Reclaimability</h3>
+                <p className={styles.reclaimLead}>
+                  The degree to which authorized humans can understand, interrupt, constrain, reverse, or withdraw
+                  delegated authority before unacceptable consequences become irreversible.
+                </p>
+                <p className={styles.reclaimBody}>
+                  It is distinct from accountability, which is retrospective, and from oversight, which may be purely
+                  observational. Reclaimability is prospective, tempo-sensitive and architecturally grounded. A system
+                  can be technically stoppable and still not reclaimable.
+                </p>
+              </div>
+              <div className={styles.reclaimTest}>
+                <h4 className={styles.testTitle}>The Reclaimability Test</h4>
+                <p className={styles.testIntro}>Two conditions must hold at the same time.</p>
+                <div className={styles.testItem}>
+                  <p className={styles.testName}>1 · Temporal feasibility</p>
+                  <p>Intervention arrives before harm becomes irreversible.</p>
+                  <p className={styles.formula}>L<sub>rec</sub> ≤ T<sub>harm</sub></p>
+                </div>
+                <div className={styles.testItem}>
+                  <p className={styles.testName}>2 · Capacity feasibility</p>
+                  <p>Escalations do not exceed what human oversight can absorb.</p>
+                  <p className={styles.formula}>r<sub>E</sub> · p<sub>esc</sub> · w ≤ r<sub>O</sub></p>
+                </div>
+                <p className={styles.testNote}>Meeting only one produces the appearance of control, not governability.</p>
+              </div>
+            </div>
+
             <p className={styles.motto}>Bounded agency does not emerge. It must be designed.</p>
           </div>
         </section>
@@ -186,9 +218,10 @@ export default function Books() {
         <section id="research" className={styles.section}>
           <div className={styles.wrap}>
             <p className={styles.eyebrow}>Research</p>
-            <h2 className={styles.h2}>Working papers on SSRN.</h2>
+            <h2 className={styles.h2}>Research papers.</h2>
             <p className={styles.sectionLead}>
-              The research behind the Bounded Agency framework, and related work on human development in the age of AI.
+              The research behind the Bounded Agency framework, and related work on human development in the age of AI
+              — all available on SSRN.
             </p>
             {paperGroups.map((g) => (
               <div key={g.theme} className={styles.paperGroup}>
