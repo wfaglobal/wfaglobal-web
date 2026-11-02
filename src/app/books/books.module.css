@@ -52,6 +52,12 @@
 .bookLink { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; min-height: 44px; padding: 0 1.4rem; border: 1px solid var(--navy); color: var(--navy); font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; }
 .bookLink:hover { background: var(--navy); color: #fff; }
 
+.paperGrid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+.paper { display: flex; flex-direction: column; border: 1px solid var(--border); border-top: 3px solid var(--navy); padding: 1.75rem; background: #fff; }
+.paperTitle { font-family: 'Source Serif 4', serif; font-weight: 400; font-size: 1.3rem; line-height: 1.3; color: var(--navy); margin-bottom: 0.8rem; }
+.ruled { border-top: 1px solid var(--border); }
+@media (max-width: 900px) { .paperGrid { grid-template-columns: 1fr; } }
+
 .links { display: flex; gap: 1.5rem; }
 .links a { color: var(--blue); font-size: 0.95rem; font-weight: 500; }
 
