@@ -7,11 +7,11 @@ import styles from './books.module.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wfaglobal.com'),
-  title: 'Books — Ravi S. Bhagavatula | WFA Global Investments',
+  title: 'Ravi S. Bhagavatula — Bounded Agency & Books',
   description:
     'AI governance is more than policies and PDFs. Books by Ravi S. Bhagavatula, PhD, CFA: Bounded Agency, AI in Finance, and The Entrepreneur’s Journey.',
   openGraph: {
-    title: 'View My Books — Ravi S. Bhagavatula',
+    title: 'Ravi S. Bhagavatula — Bounded Agency & Books',
     description: 'AI governance is more than policies and PDFs. It is a question of design feasibility.',
     url: 'https://wfaglobal.com/books',
     images: ['/books/bounded-agency.jpg'],
