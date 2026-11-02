@@ -56,6 +56,21 @@ const books = [
   },
 ]
 
+const papers = [
+  {
+    meta: 'SSRN working paper · 2026',
+    title: 'Bounded Agency: An Ethical and Institutional Limit for Autonomous AI Systems',
+    text: 'Formalizes the Bounded Agency Limit and the six governance primitives, applied across healthcare, content platforms, enterprise automation and financial systems — reframing AI ethics as a structural property of institutional design.',
+    url: 'https://ssrn.com/abstract=6352698',
+  },
+  {
+    meta: 'SSRN working paper · 2026',
+    title: 'Institutions, Organizations, and the Bounded Agency Imperative: Rethinking Governance Design in the Age of Agentic AI',
+    text: 'Institutional frameworks were built for human agents acting at human tempo. As AI exercises delegated authority continuously and at operational speed, those assumptions fail — and governance must be redesigned around bounded agency.',
+    url: 'https://ssrn.com/abstract=6328579',
+  },
+]
+
 const principles = [
   { n: '01', title: 'Authority Boundary', text: 'Explicit limits on what the system may decide — enforced in the system, not merely defined in policy.' },
   { n: '02', title: 'Intervention Right', text: 'Protected override without penalty — a human can act before the outcome is fixed.' },
@@ -155,7 +170,27 @@ export default function Books() {
           </div>
         </section>
 
-        <section className={styles.section}>
+        <section id="research" className={styles.section}>
+          <div className={styles.wrap}>
+            <p className={styles.eyebrow}>Research</p>
+            <h2 className={styles.h2}>Working papers on SSRN.</h2>
+            <p className={styles.sectionLead}>The academic foundations of the Bounded Agency framework.</p>
+            <div className={styles.paperGrid}>
+              {papers.map((p) => (
+                <article key={p.url} className={styles.paper}>
+                  <p className={styles.role}>{p.meta}</p>
+                  <h3 className={styles.paperTitle}>{p.title}</h3>
+                  <p className={styles.bookText}>{p.text}</p>
+                  <a href={p.url} target="_blank" rel="noopener noreferrer" className={styles.bookLink}>
+                    Read on SSRN
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className={`${styles.section} ${styles.ruled}`}>
           <div className={styles.wrap}>
             <div className={styles.split}>
               <div className={styles.splitHead}>
