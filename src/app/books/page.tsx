@@ -193,7 +193,7 @@ export default function Books() {
         <section id="books" className={`${styles.section} ${styles.tinted}`}>
           <div className={styles.wrap}>
             <p className={styles.eyebrow}>My books</p>
-            <h2 className={styles.h2}>One argument, three books.</h2>
+            <h2 className={styles.h2}>An argument that threads three books.</h2>
             <p className={styles.sectionLead}>
               The framework, its application to financial institutions, and the human discipline of responsible action
               that sits underneath both.
