@@ -12,7 +12,9 @@
 .btnPrimary:hover { opacity: 0.85; }
 .btnGhost { border: 1px solid var(--navy); color: var(--navy); }
 .btnGhost:hover { background: #f2f5fa; }
-.byline { margin-top: 2rem; font-size: 0.85rem; color: var(--muted); }
+.byline { margin-top: 2.25rem; font-size: 1.15rem; color: var(--text-mid); }
+.byline strong { color: var(--navy); font-weight: 500; }
+@media (max-width: 768px) { .byline { font-size: 1rem; } }
 
 .section { padding: 4.5rem 0; }
 .tinted { background: #f4f6f9; }
