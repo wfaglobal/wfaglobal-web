@@ -57,9 +57,12 @@ const books = [
 ]
 
 const principles = [
-  { n: '01', title: 'Authority Boundaries', text: 'Enforced in the system, not merely defined in policy.' },
-  { n: '02', title: 'Intervention Rights', text: 'Time-feasible and legitimate — a human can act before the outcome is fixed.' },
-  { n: '03', title: 'Accountability Mapping', text: 'Responsibility aligned with the actual capacity to intervene.' },
+  { n: '01', title: 'Authority Boundary', text: 'Explicit limits on what the system may decide — enforced in the system, not merely defined in policy.' },
+  { n: '02', title: 'Intervention Right', text: 'Protected override without penalty — a human can act before the outcome is fixed.' },
+  { n: '03', title: 'Tempo Matching', text: 'Governance that operates at execution speed, not at the pace of committees.' },
+  { n: '04', title: 'Reauthorization Cycle', text: 'Authority expires and must be renewed, so it cannot drift unchecked.' },
+  { n: '05', title: 'Safe Mode & Rollback', text: 'Degraded states between full operation and shutdown, with a path back.' },
+  { n: '06', title: 'Accountability Mapping', text: 'Responsibility matched to the actual capacity to intervene.' },
 ]
 
 export default function Books() {
@@ -102,6 +105,13 @@ export default function Books() {
                   becomes real when it is built into the system, not written beside it.
                 </p>
               </div>
+            </div>
+            <div className={styles.primHead}>
+              <h3 className={styles.h3}>The six governability primitives</h3>
+              <p>
+                The minimum needed to govern a single AI agent. When multiple agents interact, governance demands
+                considerably more.
+              </p>
             </div>
             <div className={styles.principles}>
               {principles.map((p) => (
