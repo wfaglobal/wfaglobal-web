@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://wfaglobal.com'),
   title: 'Ravi S. Bhagavatula — Bounded Agency & Books',
   description:
-    'AI governance is more than policies and PDFs. Books by Ravi S. Bhagavatula, PhD, CFA: Bounded Agency, AI in Finance, and The Entrepreneur’s Journey.',
+    'AI governance is much more than policies and PDFs. Books by Ravi S. Bhagavatula, PhD, CFA: Bounded Agency, AI in Finance, and The Entrepreneur’s Journey.',
   openGraph: {
     title: 'Ravi S. Bhagavatula — Bounded Agency & Books',
-    description: 'AI governance is more than policies and PDFs. It is a question of design feasibility.',
+    description: 'Are you in control of your AI? AI governance is much more than policies and PDFs.',
     url: 'https://wfaglobal.com/books',
     images: ['/books/bounded-agency.jpg'],
   },
@@ -105,7 +105,8 @@ export default function Books() {
               <span className={styles.identitySep} aria-hidden="true">|</span>
               <span className={styles.identityTag}>Books &amp; Research</span>
             </p>
-            <h1 className={styles.heroTitle}>AI governance is more than policies and PDFs.</h1>
+            <p className={styles.kicker}>Are you in control of your AI?</p>
+            <h1 className={styles.heroTitle}>AI governance is much more than policies and PDFs.</h1>
             <p className={styles.heroLead}>
               It is a question of design feasibility: whether human agency can still be exercised — to see, to slow
               down, to intervene — once AI acts at execution speed.
