@@ -31,6 +31,7 @@ const books = [
     alt: 'Cover of Bounded Agency by Ravi S. Bhagavatula',
     text: 'How do we govern what we cannot see or slow down? The book introduces the Bounded Agency Limit and, through the archetypes TARZ (bounded by design) and VIKKY (unbounded), traces the silent migration of authority from people to systems. Build TARZ or drift toward VIKKY.',
     link: 'https://readerdepot.com/books/bounded-agency/',
+    linkLabel: 'View on Reader Depot',
   },
   {
     role: 'Applied to finance',
@@ -41,7 +42,8 @@ const books = [
     h: 1170,
     alt: 'Cover of AI in Finance: Agentic Financial Organizations by Ravi S. Bhagavatula and P. K. Prasanna Kumar',
     text: 'AI agency without boundaries creates risk; automation without judgment makes risk unmanageable. For boards, senior management, risk and technology teams, an architectural framework for adopting bounded agentic AI — scaling intelligence without surrendering accountability.',
-    link: 'https://www.amazon.com/s?k=9798902318118&i=stripbooks',
+    link: 'https://www.amazon.com/dp/B0GWZWQ9WY',
+    linkLabel: 'View on Amazon',
   },
   {
     role: 'The leader’s discipline',
@@ -53,6 +55,7 @@ const books = [
     alt: 'Cover of The Entrepreneur’s Journey by Ravi S. Bhagavatula',
     text: 'Human agency starts with the person who must act. Eighteen stages of responsible action, read through the Bhagavad Gita as a structural map and grounded in MAG7 and Global25 companies. In the age of AI, the stages stay the same; the consequences grow larger.',
     link: 'https://www.amazon.com/s?k=The+Entrepreneur%27s+Journey+Bhagavatula&i=stripbooks',
+    linkLabel: 'Find on Amazon',
   },
 ]
 
@@ -208,7 +211,7 @@ export default function Books() {
                   <p className={styles.bookSub}>{b.subtitle}</p>
                   <p className={styles.bookText}>{b.text}</p>
                   <a href={b.link} target="_blank" rel="noopener noreferrer" className={styles.bookLink}>
-                    Book Link
+                    {b.linkLabel}
                   </a>
                 </article>
               ))}
@@ -256,6 +259,13 @@ export default function Books() {
           <div className={styles.wrap}>
             <div className={styles.split}>
               <div className={styles.splitHead}>
+                <Image
+                  src="/books/ravi-headshot.jpg"
+                  alt="Ravi S. Bhagavatula"
+                  width={320}
+                  height={320}
+                  className={styles.headshot}
+                />
                 <p className={styles.eyebrow}>About</p>
                 <h2 className={styles.h2}>Ravi S. Bhagavatula, PhD, CFA</h2>
               </div>

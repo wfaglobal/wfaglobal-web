@@ -27,33 +27,39 @@ export async function POST(req: NextRequest) {
     ? `Books page inquiry${topic ? `: ${topic}` : ''} — ${name}`
     : `New Contact Form Submission from ${name}`
 
-  // Use Resend or any email service - for now log and return success
-  // In production add: RESEND_API_KEY to Vercel env vars
+  // Messages are emailed via Resend (RESEND_API_KEY in Vercel env vars).
+  // If sending is not possible, return an error so the visitor sees the fallback
+  // email address instead of a false "Message Sent".
   const RESEND_API_KEY = process.env.RESEND_API_KEY
+  if (!RESEND_API_KEY) {
+    console.error('RESEND_API_KEY not set — contact form message was not emailed.')
+    return NextResponse.json({ success: false, error: 'email_not_configured' }, { status: 503 })
+  }
 
-  if (RESEND_API_KEY) {
-    try {
-      await fetch('https://api.resend.com/emails', {
-        method: 'POST',
-        headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          from: 'WFA Global Website <noreply@wfaglobal.com>',
-          to: [to],
-          reply_to: email,
-          subject,
-          html:
-            `<p><strong>Name:</strong> ${esc(name)}</p>` +
-            `<p><strong>Email:</strong> ${esc(email)}</p>` +
-            `<p><strong>Organization:</strong> ${esc(organization)}</p>` +
-            (topic ? `<p><strong>Topic:</strong> ${esc(topic)}</p>` : '') +
-            `<p><strong>Message:</strong></p><p style="white-space:pre-wrap">${esc(message)}</p>`,
-        }),
-      })
-    } catch (err) {
-      console.error('Email send failed:', err)
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { 'Authorization': `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        from: 'WFA Global Website <noreply@wfaglobal.com>',
+        to: [to],
+        reply_to: email,
+        subject,
+        html:
+          `<p><strong>Name:</strong> ${esc(name)}</p>` +
+          `<p><strong>Email:</strong> ${esc(email)}</p>` +
+          `<p><strong>Organization:</strong> ${esc(organization)}</p>` +
+          (topic ? `<p><strong>Topic:</strong> ${esc(topic)}</p>` : '') +
+          `<p><strong>Message:</strong></p><p style="white-space:pre-wrap">${esc(message)}</p>`,
+      }),
+    })
+    if (!res.ok) {
+      console.error('Resend rejected the email:', res.status, await res.text())
+      return NextResponse.json({ success: false, error: 'email_send_failed' }, { status: 502 })
     }
-  } else {
-    console.warn('RESEND_API_KEY not set — contact form message was not emailed.')
+  } catch (err) {
+    console.error('Email send failed:', err)
+    return NextResponse.json({ success: false, error: 'email_send_failed' }, { status: 502 })
   }
 
   return NextResponse.json({ success: true })

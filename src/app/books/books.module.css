@@ -85,6 +85,7 @@
   .paperLink { justify-self: start; margin-top: 0.35rem; }
 }
 
+.headshot { width: 140px; height: 140px; border-radius: 50%; object-fit: cover; margin-bottom: 1.5rem; box-shadow: 0 0 0 4px #fff, 0 0 0 5px var(--border); }
 .links { display: flex; gap: 1.5rem; }
 .links a { color: var(--blue); font-size: 0.95rem; font-weight: 500; }
 
