@@ -83,7 +83,7 @@ export default function Books() {
               <a href="#contact" className={styles.btnGhost}>Get in touch</a>
             </div>
             <p className={styles.byline}>
-              <strong>Ravi S. Bhagavatula, PhD, CFA</strong> · Author of <em>Bounded Agency</em>
+              <strong>Ravi S. Bhagavatula, PhD, CFA</strong> · Author of <em>Bounded Agency</em> — A Framework for AI Systems
             </p>
           </div>
         </section>
