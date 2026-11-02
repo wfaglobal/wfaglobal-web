@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactForm from '@/components/ContactForm'
-import styles from './books.module.css'
+import styles from './ravi.module.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://wfaglobal.com'),
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Ravi S. Bhagavatula — Bounded Agency & Books',
     description: 'Are you in control of your AI? AI governance is much more than policies and PDFs.',
-    url: 'https://wfaglobal.com/books',
+    url: 'https://wfaglobal.com/ravi',
     images: ['/books/bounded-agency.jpg'],
   },
   // Unlisted page: reachable only by direct link (e.g. LinkedIn), not via site navigation or search engines.
@@ -93,7 +93,7 @@ const principles = [
   { n: '06', title: 'Accountability Mapping', text: 'Responsibility matched to the actual capacity to intervene.' },
 ]
 
-export default function Books() {
+export default function Ravi() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <Header />
