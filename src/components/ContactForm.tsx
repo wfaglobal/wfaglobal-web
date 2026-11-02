@@ -2,7 +2,16 @@
 import { useState } from 'react'
 import styles from './ContactForm.module.css'
 
-export default function ContactForm() {
+type Props = {
+  /** Identifies the page the form is on; the API routes 'books' messages to Ravi. */
+  source?: 'books'
+  /** Optional topic dropdown. */
+  topics?: string[]
+  /** Address shown if sending fails. */
+  fallbackEmail?: string
+}
+
+export default function ContactForm({ source, topics, fallbackEmail = 'contact@wfaglobal.com' }: Props = {}) {
   const [status, setStatus] = useState<'idle'|'sending'|'sent'|'error'>('idle')
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -13,8 +22,10 @@ export default function ContactForm() {
       name: (form.elements.namedItem('name') as HTMLInputElement).value,
       email: (form.elements.namedItem('email') as HTMLInputElement).value,
       organization: (form.elements.namedItem('organization') as HTMLInputElement).value,
+      topic: topics ? (form.elements.namedItem('topic') as HTMLSelectElement).value : undefined,
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
       website: (form.elements.namedItem('website') as HTMLInputElement).value, // honeypot
+      source,
     }
     try {
       const res = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) })
@@ -31,6 +42,14 @@ export default function ContactForm() {
       <input className={styles.cf} name="email" type="email" placeholder="your@email.com" required />
       <label className={styles.lbl}>Organization</label>
       <input className={styles.cf} name="organization" type="text" placeholder="Firm or institution" />
+      {topics && (
+        <>
+          <label className={styles.lbl}>Topic</label>
+          <select className={styles.cf} name="topic" defaultValue={topics[0]}>
+            {topics.map((t) => <option key={t}>{t}</option>)}
+          </select>
+        </>
+      )}
       <label className={styles.lbl}>Message</label>
       <textarea className={styles.cf} name="message" placeholder="Please write your message here" required />
 
@@ -46,7 +65,7 @@ export default function ContactForm() {
       <button type="submit" className={styles.btn} disabled={status === 'sending'}>
         {status === 'sending' ? 'Sending...' : status === 'sent' ? 'Message Sent ✓' : 'Send Message'}
       </button>
-      {status === 'error' && <p className={styles.error}>Something went wrong. Please email us directly at contact@wfaglobal.com</p>}
+      {status === 'error' && <p className={styles.error}>Something went wrong. Please email directly at {fallbackEmail}</p>}
     </form>
   )
 }
