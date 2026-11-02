@@ -165,9 +165,8 @@ export default function Books() {
                   and interdisciplinary research.
                 </p>
                 <p>
-                  He is Managing Partner at WFA Global Investments and a multi-strategy investor, an early investor in
-                  technology ventures including ideaForge and Nexus, with interests spanning frontier technologies,
-                  quantum computing and AI governance.
+                  He is Managing Partner at WFA Global Investments and a multi-strategy investor in frontier
+                  technologies, with interests spanning quantum computing and AI governance.
                 </p>
                 <p className={styles.links}>
                   <a href="https://www.linkedin.com/in/rbhagavatula" target="_blank" rel="noopener noreferrer">LinkedIn</a>
