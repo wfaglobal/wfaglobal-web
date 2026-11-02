@@ -72,18 +72,22 @@ export default function Books() {
       <main style={{ flex: 1 }}>
         <section className={styles.hero}>
           <div className={styles.wrap}>
-            <p className={styles.eyebrow}>AI Governance · Bounded Agency</p>
+            <p className={styles.identity}>
+              <strong>Ravi S. Bhagavatula, PhD, CFA</strong>
+              <span className={styles.identitySep} aria-hidden="true">|</span>
+              <span className={styles.identityTag}>Books &amp; Research</span>
+            </p>
             <h1 className={styles.heroTitle}>AI governance is more than policies and PDFs.</h1>
             <p className={styles.heroLead}>
               It is a question of design feasibility: whether human agency can still be exercised — to see, to slow
               down, to intervene — once AI acts at execution speed.
             </p>
             <div className={styles.ctas}>
-              <a href="#books" className={styles.btnPrimary}>View my books</a>
+              <a href="#books" className={styles.btnPrimary}>Explore my books &amp; research</a>
               <a href="#contact" className={styles.btnGhost}>Get in touch</a>
             </div>
             <p className={styles.byline}>
-              <strong>Ravi S. Bhagavatula, PhD, CFA</strong> · Author of <em>Bounded Agency</em> — A Framework for AI Systems
+              Author of <em>Bounded Agency</em> — A Framework for AI Systems
             </p>
           </div>
         </section>
