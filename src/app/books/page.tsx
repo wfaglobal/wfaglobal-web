@@ -56,18 +56,31 @@ const books = [
   },
 ]
 
-const papers = [
+// SSRN working papers, grouped by theme, newest first. URL: https://ssrn.com/abstract=<id>
+const paperGroups = [
   {
-    meta: 'SSRN working paper · 2026',
-    title: 'Bounded Agency: An Ethical and Institutional Limit for Autonomous AI Systems',
-    text: 'Formalizes the Bounded Agency Limit and the six governance primitives, applied across healthcare, content platforms, enterprise automation and financial systems — reframing AI ethics as a structural property of institutional design.',
-    url: 'https://ssrn.com/abstract=6352698',
+    theme: 'Bounded Agency & AI Governance',
+    papers: [
+      { id: '6916678', date: 'Jun 2026', title: 'Bounded Agency in the Age of AI', subtitle: 'Institutional Foundations and Domain Applications' },
+      { id: '6912758', date: 'Jun 2026', title: 'Six Failure Modes of AI Delegation', subtitle: 'Deriving the Bounded Agency Primitives from a Feasibility Constraint for Intervention' },
+      { id: '6352698', date: 'Mar 2026', title: 'Bounded Agency: An Ethical and Institutional Limit for Autonomous AI Systems' },
+      { id: '6328579', date: 'Mar 2026', title: 'Institutions, Organizations, and the Bounded Agency Imperative', subtitle: 'Rethinking Governance Design in the Age of Agentic AI' },
+      { id: '6067968', date: 'Jan 2026', title: 'Bounded Agency in the Age of AI', subtitle: 'Decision Rights, Responsibility, and Governance Under Automation' },
+    ],
   },
   {
-    meta: 'SSRN working paper · 2026',
-    title: 'Institutions, Organizations, and the Bounded Agency Imperative: Rethinking Governance Design in the Age of Agentic AI',
-    text: 'Institutional frameworks were built for human agents acting at human tempo. As AI exercises delegated authority continuously and at operational speed, those assumptions fail — and governance must be redesigned around bounded agency.',
-    url: 'https://ssrn.com/abstract=6328579',
+    theme: 'Inference & Methodology',
+    papers: [
+      { id: '7296798', date: 'Aug 2026', title: 'Mechanism-informed Inference Models', subtitle: 'A Category, and Its Scope Conditions' },
+    ],
+  },
+  {
+    theme: 'Human Development in the Age of AI',
+    papers: [
+      { id: '6463438', date: 'Mar 2026', title: 'Development Resilience as a Missing State Variable for the Age of AI', subtitle: 'Empirical Evidence and Implications for GDP and Sovereign Risk' },
+      { id: '6061414', date: 'Jan 2026', title: 'The Human Development Spread (HDS)', subtitle: 'Why Economic Growth Can Coexist with Rising Human Fragility in the Age of AI' },
+      { id: '6026234', date: 'Jan 2026', title: 'Gross Domestic Human Progress (GDHP)', subtitle: 'A Beyond-GDP Framework for Measuring Human Development in the Age of AI' },
+    ],
   },
 ]
 
@@ -174,19 +187,34 @@ export default function Books() {
           <div className={styles.wrap}>
             <p className={styles.eyebrow}>Research</p>
             <h2 className={styles.h2}>Working papers on SSRN.</h2>
-            <p className={styles.sectionLead}>The academic foundations of the Bounded Agency framework.</p>
-            <div className={styles.paperGrid}>
-              {papers.map((p) => (
-                <article key={p.url} className={styles.paper}>
-                  <p className={styles.role}>{p.meta}</p>
-                  <h3 className={styles.paperTitle}>{p.title}</h3>
-                  <p className={styles.bookText}>{p.text}</p>
-                  <a href={p.url} target="_blank" rel="noopener noreferrer" className={styles.bookLink}>
-                    Read on SSRN
-                  </a>
-                </article>
-              ))}
-            </div>
+            <p className={styles.sectionLead}>
+              The research behind the Bounded Agency framework, and related work on human development in the age of AI.
+            </p>
+            {paperGroups.map((g) => (
+              <div key={g.theme} className={styles.paperGroup}>
+                <h3 className={styles.paperTheme}>{g.theme}</h3>
+                <ul className={styles.paperList}>
+                  {g.papers.map((p) => (
+                    <li key={p.id} className={styles.paperRow}>
+                      <span className={styles.paperDate}>{p.date}</span>
+                      <span className={styles.paperText}>
+                        <span className={styles.paperTitle}>{p.title}</span>
+                        {p.subtitle && <span className={styles.paperSub}>{p.subtitle}</span>}
+                      </span>
+                      <a
+                        href={`https://ssrn.com/abstract=${p.id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.paperLink}
+                        aria-label={`Read “${p.title}” on SSRN`}
+                      >
+                        Read on SSRN →
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </section>
 
